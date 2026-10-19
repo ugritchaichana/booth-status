@@ -7,7 +7,7 @@ sites:
     __dangerous__body_down_if_text_missing: '"d1":"ok"'
 
 status-website:
-  baseUrl: /booth-status
+  cname: status.booth.pp.ua
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: Booth Service Status
   introTitle: "**Booth Service Status**"
