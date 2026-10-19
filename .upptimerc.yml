@@ -17,3 +17,34 @@ status-website:
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
+  js: |
+    (async () => {
+      try {
+        const r = await fetch("https://raw.githubusercontent.com/ugritchaichana/booth-status/master/history/summary.json");
+        if (!r.ok) return;
+        const origins = {};
+        for (const s of await r.json()) origins[s.slug] = new URL(s.url).origin;
+        const apply = () => {
+          for (const a of document.querySelectorAll('section.live-status article h4 a[href*="/history/"]')) {
+            const card = a.closest("article");
+            if (card.querySelector("[data-site-link]")) continue;
+            const origin = origins[a.getAttribute("href").replace(/\/+$/, "").split("/").pop()];
+            if (!origin) continue;
+            const line = document.createElement("div");
+            line.setAttribute("data-site-link", "");
+            line.style.cssText = "font-size:.85em;margin:-.25em 0 .5em";
+            const link = document.createElement("a");
+            link.href = origin;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.textContent = new URL(origin).hostname;
+            link.style.cssText = "color:inherit;text-decoration:underline;opacity:.8";
+            link.addEventListener("click", (e) => e.stopPropagation());
+            line.appendChild(link);
+            a.closest("h4").insertAdjacentElement("afterend", line);
+          }
+        };
+        new MutationObserver(apply).observe(document.documentElement, { childList: true, subtree: true });
+        apply();
+      } catch (e) {}
+    })();
