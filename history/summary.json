@@ -16,23 +16,5 @@
     "timeMonth": 724,
     "timeYear": 724,
     "dailyMinutesDown": {}
-  },
-  {
-    "name": "Control Negative",
-    "url": "https://mail.booth.pp.ua/api/status",
-    "icon": "https://icons.duckduckgo.com/ip3/mail.booth.pp.ua.ico",
-    "slug": "control-negative",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 305,
-    "timeDay": 305,
-    "timeWeek": 305,
-    "timeMonth": 305,
-    "timeYear": 305,
-    "dailyMinutesDown": {}
   }
 ]
