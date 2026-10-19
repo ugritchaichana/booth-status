@@ -23,18 +23,16 @@
     "icon": "https://icons.duckduckgo.com/ip3/mail.booth.pp.ua.ico",
     "slug": "discord-test",
     "status": "up",
-    "uptime": "8.71%",
-    "uptimeDay": "8.71%",
-    "uptimeWeek": "8.71%",
-    "uptimeMonth": "8.71%",
-    "uptimeYear": "8.71%",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
     "time": 299,
     "timeDay": 299,
     "timeWeek": 299,
     "timeMonth": 299,
     "timeYear": 299,
-    "dailyMinutesDown": {
-      "2026-10-19": 3
-    }
+    "dailyMinutesDown": {}
   }
 ]
