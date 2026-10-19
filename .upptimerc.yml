@@ -5,6 +5,9 @@ sites:
   - name: Mail
     url: https://mail.booth.pp.ua/api/status
     __dangerous__body_down_if_text_missing: '"d1":"ok"'
+  - name: Discord Test
+    url: https://mail.booth.pp.ua/api/status
+    __dangerous__body_down_if_text_missing: '"d1":"never-present"'
 
 status-website:
   baseUrl: /booth-status
